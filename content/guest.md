@@ -1,6 +1,6 @@
 ## Guest
 
-This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request Not My Job guests and guest information.
+This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request Not My Job guests and their corresponding information.
 
 ### List guests
 
@@ -83,7 +83,7 @@ $ curl https://api.wwdt.me/v1.0/guests/details
 
 ### Retrieve a guest
 
-Get information for a specific Not My Job guest
+Get information for a specific Not My Job guest using the guest's database ID
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/{guest_id}
@@ -112,7 +112,7 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}
 
 ### Retrieve guest details
 
-Get information and appearances for a specific Not My Job guest
+Get information and appearances for a specific Not My Job guest using the guest's database ID
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/{guest_id}/details
@@ -145,6 +145,80 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
                         "best_of": false,
                         "repeat_show": false,
                         "score": 0,
+                        "score_exception": false
+                    },
+                    ...
+                ]
+            }
+        }
+    }
+}
+```
+
+### Retrieve a guest by slug string
+
+Get information for a specific Not My Job guest using the guest's slug string
+
+```endpoint
+GET https://api.wwdt.me/v1.0/guests/{guest_slug}
+```
+
+#### Example request
+
+```curl
+$ curl https://api.wwdt.me/v1.0/guests/{guest_slug}
+```
+
+#### Example response
+
+```json
+{
+    "status": "success",
+    "data": {
+        "guest": {
+            "id": 198,
+            "name": "Drew Carey",
+            "slug": "drew-carey"
+        }
+    }
+}
+```
+
+### Retrieve guest details by slug string
+
+Get information and appearances for a specific Not My Job guest using the guest's slug string
+
+```endpoint
+GET https://api.wwdt.me/v1.0/guests/{guest_id}/details
+```
+
+#### Example Request
+
+```curl
+$ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
+```
+
+#### Example Response
+
+```json
+{
+    "status": "success",
+    "data": {
+        "guest": {
+            "id": 198,
+            "name": "Drew Carey",
+            "slug": "drew-carey",
+            "appearances": {
+                "count": {
+                    "regular_shows": 2,
+                    "all_shows": 3
+                },
+                "shows": [
+                    {
+                        "date": "2008-02-23",
+                        "best_of": false,
+                        "repeat_show": false,
+                        "score": 2,
                         "score_exception": false
                     },
                     ...
