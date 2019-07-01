@@ -48,7 +48,7 @@ GET /v1.0/guests/details
 $ curl https://api.wwdt.me/v1.0/guests/details
 ```
 
-### Example response
+#### Example response
 
 ```json
 {
