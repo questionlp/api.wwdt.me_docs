@@ -4,14 +4,14 @@
   "description": "an api documentation website",
   "main": "index.js",
   "scripts": {
-    "gen-index": "cpy --no-overwrite index.html.sample --rename=index.html .",
+    "gen-index": "cpy --no-overwrite index.html.sample --rename=index.html output/",
     "postinstall": "npm run gen-index",
     "start": "budo src/index.js --serve=bundle.js --live",
     "release": "standard-version",
     "test": "npm run test-unit && eslint src && npm run prerender -- /dev/null && rm -rf lib",
     "test-unit": "mocha --require babel-register test",
     "prerender": "babel src --out-dir lib && node lib/render.js",
-    "build": "npm run gen-index && cross-env NODE_ENV=production browserify src/index.js | uglifyjs -c -m > bundle.js && npm run prerender -- index.html"
+    "build": "npm run gen-index && cross-env NODE_ENV=production browserify src/index.js | uglifyjs -c -m > output/bundle.js && npm run prerender -- output/index.html"
   },
   "browserify": {
     "transform": [
