@@ -4,7 +4,7 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List hosts
 
-List all show hosts
+List all show hosts, sorted by host name
 
 ```endpoint
 GET /v1.0/hosts
@@ -29,6 +29,12 @@ $ curl https://api.wwdt.me/v1.0/hosts
                 "slug": "adam-felber",
                 "gender": "M"
             },
+            {
+                "id": 7,
+                "name": "Bill Radke",
+                "slug": "bill-radke",
+                "gender": "M"
+            },
             ...
         ]
     }
@@ -37,7 +43,7 @@ $ curl https://api.wwdt.me/v1.0/hosts
 
 ### List host details
 
-List all show hosts along with their appearances and scores
+List all show hosts along with their appearances and scores, sorted by host name and appearance date
 
 ```endpoint
 GET /v1.0/hosts/details
@@ -69,6 +75,12 @@ $ curl https://api.wwdt.me/v1.0/hosts/details
                     "shows": [
                         {
                             "date": "2000-08-19",
+                            "best_of": false,
+                            "repeat_show": false,
+                            "guest": true
+                        },
+                        {
+                            "date": "2001-08-25",
                             "best_of": false,
                             "repeat_show": false,
                             "guest": true
@@ -115,7 +127,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
 
 ### Retrieve host details
 
-Get information and appearances for a specific show host using the host's database ID
+Get information and appearances for a specific show host using the host's database ID, sorted by appearance date
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/{host_id}/details
@@ -146,6 +158,12 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}/details
                 "shows": [
                     {
                         "date": "2006-08-12",
+                        "best_of": false,
+                        "repeat_show": false,
+                        "guest": true
+                    },
+                    {
+                        "date": "2006-08-19",
                         "best_of": false,
                         "repeat_show": false,
                         "guest": true
@@ -190,7 +208,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 
 ### Retrieve host details by slug string
 
-Get information and appearances for a specific show host using the host's slug string
+Get information and appearances for a specific show host using the host's slug string, sorted by appearance date
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details
