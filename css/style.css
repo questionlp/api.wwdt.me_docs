@@ -35,8 +35,8 @@
 /* tables are too giant */
 .prose table,
 .prose table code {
-  margin-bottom: 20px;
-  font-size: 12px;
+  margin-bottom: 21px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -118,7 +118,7 @@ body .prose blockquote {
   content: 'PREVIEW';
   background-color: #F1F075;
   border-radius: 2px;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: normal;
   padding: 2px 5px;
   color: rgba(0, 0, 0, 0.5);

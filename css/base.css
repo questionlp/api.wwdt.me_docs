@@ -1,4 +1,4 @@
-/* Reset â™¥ Adapted from http://meyerweb.com/eric/tools/css/reset/
+/* Reset | Adapted from http://meyerweb.com/eric/tools/css/reset/
 ------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -48,7 +48,7 @@ button,
 button::-moz-focus-inner {
   border: 0;
   padding: 0;
-  font:15px/20px sans-serif;
+  font:16px/20px "IBM Plex Sans", sans-serif;
 }
 
 /* Inline Elements: Defaults
@@ -58,7 +58,7 @@ input,
 textarea {
   color:#404040;
   color:rgba(0,0,0,0.75);
-  font:15px/20px sans-serif;
+  font:16px/20px "IBM Plex Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,7 +71,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family:sans-serif;
+  font-family:"IBM Plex Sans", sans-serif;
   font-weight:bold;
   margin:0;
   }
@@ -87,23 +87,23 @@ em h6, h6 em {
   }
 
 h1 {
-  font-size:30px;
+  font-size:32px;
   line-height:40px;
   }
 h2 {
-  font-size:22px;
+  font-size:24px;
   line-height:30px;
   padding-top: 5px;
   padding-bottom:5px;
   }
 
 h3 {
-  font-size:15px;
+  font-size:16px;
   line-height:20px;
   }
 
 h4, h5, h6 {
-  font-size:12px;
+  font-size:14px;
   line-height:20px;
   }
 
@@ -114,8 +114,8 @@ p:last-child { margin-bottom:0; }
 small,
 .prose.small,
 .small {
-  font-size:12px;
-  line-height:20px;
+  font-size:14px;
+  line-height:21px;
   letter-spacing:0;
   }
 
@@ -124,7 +124,7 @@ small { display:block; }
 .micro,
 .prose .micro,
 .prose.micro {
-  font-size:10px;
+  font-size:12px;
   line-height:20px;
   letter-spacing:0;
   }
@@ -183,8 +183,8 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
   text-overflow:ellipsis;
   /* Protects button metrics in .prose context */
   font-weight: bold;
-  line-height:20px;
-  font-size:12px;
+  line-height:21px;
+  font-size:14px;
   -webkit-appearance:none;
 
   /* The button element needs to be forced this */
@@ -448,7 +448,7 @@ a.quiet.dark.active, a.quiet.dark:hover { color:rgba(255,255,255,0.5); }
     background:transparent;
     color:rgba(0,0,0,.5);
     font-weight: bold;
-    font-size:12px;
+    font-size:14px;
     text-align:center;
     display:inline-block;
     height:40px;
@@ -802,7 +802,7 @@ em pre,
 pre em,
 pre strong,
 strong pre {
-  font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  font-family:"IBM Plex Mono", Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   white-space: pre-wrap;
 }
 
@@ -818,7 +818,7 @@ strong pre,
 pre.strong,
 .strong pre,
 pre .strong {
-  font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  font-family:"IBM Plex Mono", Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   font-weight:bold;
 }
 
@@ -826,7 +826,7 @@ code em,
 em code,
 pre em,
 em pre {
-  font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  font-family:"IBM Plex Mono", Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   font-style:italic;
 }
 
@@ -924,7 +924,7 @@ input[type=text].code,
 input[type=date].code,
 input[type=email].code,
 input[type=number].code {
-  font-family:Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
+  font-family:"IBM Plex Mono", Menlo, Bitstream Vera Sans Mono, Monaco, Consolas, monospace;
   white-space: pre-wrap;
   }
 textarea,
@@ -3606,7 +3606,7 @@ img.inline, .inline           { display:inline-block; }
   /* Inline rules */
   body, input, textarea, p {
     color:#000;
-    font:12px/20px sans-serif;
+    font:16px/20px "IBM Plex Sans", sans-serif;
     }
   .prose a:after { content:' [' attr(href) '] '; }
 
