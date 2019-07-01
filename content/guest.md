@@ -160,13 +160,13 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
 Get information for a specific Not My Job guest using the guest's slug string
 
 ```endpoint
-GET https://api.wwdt.me/v1.0/guests/{guest_slug}
+GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 ```
 
 #### Example request
 
 ```curl
-$ curl https://api.wwdt.me/v1.0/guests/{guest_slug}
+$ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 ```
 
 #### Example response
@@ -189,13 +189,13 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_slug}
 Get information and appearances for a specific Not My Job guest using the guest's slug string
 
 ```endpoint
-GET https://api.wwdt.me/v1.0/guests/{guest_id}/details
+GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
 ```
 
 #### Example Request
 
 ```curl
-$ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
+$ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
 ```
 
 #### Example Response
