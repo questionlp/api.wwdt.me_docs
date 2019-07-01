@@ -43,7 +43,7 @@ guest.retrieve_all(database_connection=database_connection)
 }
 ```
 
-### List guest details
+### List guests with details
 
 List all Not My Job guests along with their appearances and scores, sorted by guest name and appearance date
 
@@ -147,7 +147,7 @@ guest.retrieve_by_id(guest_id=2, database_connection=database_connection)
 }
 ```
 
-### Retrieve guest details
+### Retrieve a guest with details
 
 Get information and appearances for a specific Not My Job guest using the guest's database ID, sorted by appearance date
 
@@ -236,7 +236,7 @@ guest.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_con
 }
 ```
 
-### Retrieve guest details by slug string
+### Retrieve a guest with details by slug string
 
 Get information and appearances for a specific Not My Job guest using the guest's slug string, sorted by appearance date
 

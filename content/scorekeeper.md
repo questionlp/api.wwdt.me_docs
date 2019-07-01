@@ -1,6 +1,6 @@
 ## Scorekeeper
 
-This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request scorekeeper and their corresponding information.
+This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request scorekeepers and their corresponding information.
 
 ### List scorekeepers
 
@@ -45,7 +45,7 @@ scorekeeper.retrieve_all(database_connection=database_connection)
 }
 ```
 
-### List scorekeeper details
+### List scorekeepers with details
 
 List all scorekeepers along with their appearances and, if available, description, sorted by scorekeeper name and appearance date
 
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/details
 scorekeeper.retrieve_all_details(database_connection=database_connection)
 ```
 
-### Example response
+#### Example response
 
 ```json
 {
@@ -160,7 +160,7 @@ scorekeeper.retrieve_by_id(host_id=11, database_connection=database_connection)
 }
 ```
 
-### Retrieve scorekeeper details
+### Retrieve a scorekeeper with details
 
 Get appearances and, if available, description for a specific scorekeeper using the scorekeeper's database ID, sorted by appearance date
 
@@ -251,7 +251,7 @@ scorekeeper.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connecti
 }
 ```
 
-### Retrieve scorekeeper details by slug string
+### Retrieve a scorekeeper with details by slug string
 
 Get information and, if available, description for a specific scorekeeper using the scorekeeper's slug string, sorted by appearance date
 

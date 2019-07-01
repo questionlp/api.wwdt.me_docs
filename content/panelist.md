@@ -45,7 +45,7 @@ panelist.retrieve_all(database_connection=database_connection)
 }
 ```
 
-### List panelist details
+### List panelists with details
 
 List all panelist along with their statistics, appearances and scores, sorted by panelists name and appearance date
 
@@ -170,7 +170,7 @@ panelist.retrieve_by_id(panelist_id=14, database_connection=database_connection)
 }
 ```
 
-### Retrieve panelist details
+### Retrieve a panelist with details
 
 Get statistics and appearances for a specific panelist using the panelist's database ID, sorted by appearance date
 
@@ -292,7 +292,7 @@ panelist.retrieve_by_slug(panelist_slug="faith-salie", database_connection=datab
 }
 ```
 
-### Retrieve panelist details by slug string
+### Retrieve a panelist with details by slug string
 
 Get information and appearances for a specific panelist using the panelist's slug string, sorted by appearance date
 

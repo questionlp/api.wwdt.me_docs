@@ -138,7 +138,7 @@ location.retrieve_by_id(location_id=2, database_connection=database_connection)
 }
 ```
 
-### Retrieve location recordings
+### Retrieve a location with list of recordings
 
 Get show recordings for a specific show location using the location's database ID, sorted by recording date
 

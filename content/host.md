@@ -1,6 +1,6 @@
 ## Host
 
-This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request hosts and their corresponding information.
+This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request show hosts and their corresponding information.
 
 ### List hosts
 
@@ -45,7 +45,7 @@ host.retrieve_all(database_connection=database_connection)
 }
 ```
 
-### List host details
+### List hosts with details
 
 List all show hosts along with their appearances and scores, sorted by host name and appearance date
 
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/details
 host.retrieve_all_details(database_connection=database_connection)
 ```
 
-### Example response
+#### Example response
 
 ```json
 {
@@ -137,7 +137,7 @@ host.retrieve_by_id(host_id=2, database_connection=database_connection)
 }
 ```
 
-### Retrieve host details
+### Retrieve a host with details
 
 Get information and appearances for a specific show host using the host's database ID, sorted by appearance date
 
@@ -226,7 +226,7 @@ host.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connec
 }
 ```
 
-### Retrieve host details by slug string
+### Retrieve a host with details by slug string
 
 Get information and appearances for a specific show host using the host's slug string, sorted by appearance date
 
