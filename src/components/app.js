@@ -14,14 +14,16 @@ let slug = title => { slugger.reset(); return slugger.slug(title); };
 let languageOptions = [
   { title: 'cURL',
     short: 'cURL',
-    value: 'curl' }
+    value: 'curl' },
 /*    
   { title: 'CLI',
     short: 'cli',
     value: 'cli' },
+*/
   { title: 'Python',
     short: 'Python',
     value: 'python' },
+/*
   { title: 'JavaScript',
     short: 'JS',
     value: 'javascript' },

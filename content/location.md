@@ -16,6 +16,10 @@ GET /v1.0/locations
 $ curl https://api.wwdt.me/v1.0/locations
 ```
 
+```python
+location.retrieve_all(database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -53,6 +57,10 @@ GET /v1.0/locations/recordings
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/locations/recordings
+```
+
+```python
+location.retrieve_all_recordings(database_connection=database_connection)
 ```
 
 #### Example response
@@ -110,6 +118,10 @@ GET https://api.wwdt.me/v1.0/locations/{location_id}
 $ curl https://api.wwdt.me/v1.0/locations/{location_id}
 ```
 
+```python
+location.retrieve_by_id(location_id=2, database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -138,6 +150,10 @@ GET https://api.wwdt.me/v1.0/locations/{location_id}/recordings
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/locations/{location_id}/recordings
+```
+
+```python
+location.retrieve_recordings_by_id(location_id=2, database_connection=database_connection)
 ```
 
 #### Example Response

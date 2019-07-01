@@ -16,6 +16,10 @@ GET /v1.0/hosts
 $ curl https://api.wwdt.me/v1.0/hosts
 ```
 
+```python
+host.retrieve_all(database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -53,6 +57,10 @@ GET /v1.0/hosts/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/details
+```
+
+```python
+host.retrieve_all_details(database_connection=database_connection)
 ```
 
 ### Example response
@@ -109,6 +117,10 @@ GET https://api.wwdt.me/v1.0/hosts/{host_id}
 $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
 ```
 
+```python
+host.retrieve_by_id(host_id=2, database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -137,6 +149,10 @@ GET https://api.wwdt.me/v1.0/hosts/{host_id}/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/{host_id}/details
+```
+
+```python
+host.retrieve_details_by_id(host_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -190,6 +206,10 @@ GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 ```
 
+```python
+host.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -218,6 +238,10 @@ GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details
+```
+
+```python
+host.retrieve_details_by_slug(host_slug="tom-hanks", database_connection=database_connection)
 ```
 
 #### Example Response

@@ -15,4 +15,7 @@ module.exports =
   '# Components\n' +
   fs.readFileSync('./content/guest.md', 'utf8') + '\n' +
   fs.readFileSync('./content/host.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/location.md', 'utf8') + '\n';
+  fs.readFileSync('./content/location.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/panelist.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/scorekeeper.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/show.md', 'utf8');

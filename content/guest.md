@@ -16,6 +16,10 @@ GET /v1.0/guests
 $ curl https://api.wwdt.me/v1.0/guests
 ```
 
+```python
+guest.retrieve_all(database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -51,6 +55,10 @@ GET /v1.0/guests/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/details
+```
+
+```python
+guest.retrieve_all_details(database_connection=database_connection)
 ```
 
 #### Example response
@@ -120,6 +128,10 @@ GET https://api.wwdt.me/v1.0/guests/{guest_id}
 $ curl https://api.wwdt.me/v1.0/guests/{guest_id}
 ```
 
+```python
+guest.retrieve_by_id(guest_id=2, database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -147,6 +159,10 @@ GET https://api.wwdt.me/v1.0/guests/{guest_id}/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
+```
+
+```python
+guest.retrieve_details_by_id(guest_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -201,6 +217,10 @@ GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 ```
 
+```python
+guest.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_connection)
+```
+
 #### Example response
 
 ```json
@@ -228,6 +248,10 @@ GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
+```
+
+```python
+guest.retrieve_details_by_slug(guest_slug="drew-carey", database_connection=database_connection)
 ```
 
 #### Example Response
