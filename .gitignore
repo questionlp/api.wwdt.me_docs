@@ -1,4 +1,7 @@
+# Exclude library and module directories
 lib/
+node_modules/
+
+# Exclude npm run build generated content
+output/
 bundle.js
-index.html
-node_modules
