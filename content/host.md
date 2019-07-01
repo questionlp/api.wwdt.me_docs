@@ -19,7 +19,20 @@ $ curl https://api.wwdt.me/v1.0/hosts
 #### Example response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "hosts": [
+            {
+                "id": 3,
+                "name": "Adam Felber",
+                "slug": "adam-felber",
+                "gender": "M"
+            },
+            ...
+        ]
+    }
+}
 ```
 
 ### List host details
@@ -39,7 +52,35 @@ $ curl https://api.wwdt.me/v1.0/hosts/details
 ### Example response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "hosts": [
+            {
+                "id": 3,
+                "name": "Adam Felber",
+                "slug": "adam-felber",
+                "gender": "M",
+                "appearances": {
+                    "count": {
+                        "regular_shows": 6,
+                        "all_shows": 6
+                    },
+                    "shows": [
+                        {
+                            "date": "2000-08-19",
+                            "best_of": false,
+                            "repeat_show": false,
+                            "guest": true
+                        },
+                        ...
+                    ]
+                }
+            },
+            ...
+        ]
+    }
+}
 ```
 
 ### Retrieve a host
@@ -59,7 +100,17 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
 #### Example response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "host": {
+            "id": 2,
+            "name": "Luke Burbank",
+            "slug": "luke-burbank",
+            "gender": "M"
+        }
+    }
+}
 ```
 
 ### Retrieve host details
@@ -79,7 +130,32 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}/details
 #### Example Response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "host": {
+            "id": 2,
+            "name": "Luke Burbank",
+            "slug": "luke-burbank",
+            "gender": "M",
+            "appearances": {
+                "count": {
+                    "regular_shows": 5,
+                    "all_shows": 5
+                },
+                "shows": [
+                    {
+                        "date": "2006-08-12",
+                        "best_of": false,
+                        "repeat_show": false,
+                        "guest": true
+                    },
+                    ...
+                ]
+            }
+        }
+    }
+}
 ```
 
 ### Retrieve a host by slug string
@@ -99,7 +175,17 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 #### Example response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "host": {
+            "id": 15,
+            "name": "Tom Hanks",
+            "slug": "tom-hanks",
+            "gender": "M"
+        }
+    }
+}
 ```
 
 ### Retrieve host details by slug string
@@ -119,5 +205,35 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details
 #### Example Response
 
 ```json
-
+{
+    "status": "success",
+    "data": {
+        "host": {
+            "id": 15,
+            "name": "Tom Hanks",
+            "slug": "tom-hanks",
+            "gender": "M",
+            "appearances": {
+                "count": {
+                    "regular_shows": 1,
+                    "all_shows": 2
+                },
+                "shows": [
+                    {
+                        "date": "2017-01-14",
+                        "best_of": false,
+                        "repeat_show": false,
+                        "guest": true
+                    },
+                    {
+                        "date": "2017-08-26",
+                        "best_of": false,
+                        "repeat_show": true,
+                        "guest": true
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
