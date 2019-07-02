@@ -14,10 +14,12 @@ module.exports =
   fs.readFileSync('./content/introduction.md', 'utf8') + '\n' +
   '# Specification\n' +
   fs.readFileSync('./content/response.md', 'utf8') + '\n' +
-  '# Components\n' +
-  fs.readFileSync('./content/guest.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/host.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/location.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/panelist.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/scorekeeper.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/show.md', 'utf8');
+  '# Endpoints\n' +
+  fs.readFileSync('./content/endpoints/general.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/guest.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/host.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/location.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/panelist.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/scorekeeper.md', 'utf8') + '\n' +
+  fs.readFileSync('./content/endpoints/show.md', 'utf8');
+  
