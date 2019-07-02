@@ -10,7 +10,7 @@ List all Not My Job guests, sorted by guest name
 GET /v1.0/guests
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests
@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/guests
 guest.retrieve_all(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -51,7 +51,7 @@ List all Not My Job guests along with their appearances and scores, sorted by gu
 GET /v1.0/guests/details
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/details
@@ -61,7 +61,7 @@ $ curl https://api.wwdt.me/v1.0/guests/details
 guest.retrieve_all_details(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -122,7 +122,7 @@ Get information for a specific Not My Job guest using the guest's database ID
 GET https://api.wwdt.me/v1.0/guests/{guest_id}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/{guest_id}
@@ -132,7 +132,7 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}
 guest.retrieve_by_id(guest_id=2, database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -211,7 +211,7 @@ Get information for a specific Not My Job guest using the guest's slug string
 GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
@@ -221,7 +221,7 @@ $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 guest.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {

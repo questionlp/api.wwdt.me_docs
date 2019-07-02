@@ -10,7 +10,7 @@ List all show locations, sorted by state, city and venue name
 GET /v1.0/locations
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/locations
@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/locations
 location.retrieve_all(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -53,7 +53,7 @@ List all show locations along with their recordings, sorted by state, city, venu
 GET /v1.0/locations/recordings
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/locations/recordings
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/locations/recordings
 location.retrieve_all_recordings(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -112,7 +112,7 @@ Get information for a specific show location using the location's database ID
 GET https://api.wwdt.me/v1.0/locations/{location_id}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/locations/{location_id}
@@ -122,7 +122,7 @@ $ curl https://api.wwdt.me/v1.0/locations/{location_id}
 location.retrieve_by_id(location_id=2, database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {

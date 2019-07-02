@@ -10,7 +10,7 @@ List all panelists, sorted by panelists name
 GET /v1.0/panelists
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists
@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/panelists
 panelist.retrieve_all(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -53,7 +53,7 @@ List all panelist along with their statistics, appearances and scores, sorted by
 GET /v1.0/panelists/details
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/details
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/details
 panelist.retrieve_all_details(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -144,7 +144,7 @@ Get information for a specific panelist using the panelists's database ID
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}
@@ -154,7 +154,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}
 panelist.retrieve_by_id(panelist_id=14, database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -266,7 +266,7 @@ Get information for a specific panelist using the panelist's slug string
 GET https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}
@@ -276,7 +276,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}
 panelist.retrieve_by_slug(panelist_slug="faith-salie", database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -390,7 +390,7 @@ Each list is sorted by appearance date.
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
@@ -399,7 +399,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```python
 panelist.retrieve_scores_list_by_id(panelist_id=14, database_connection=database_connection)
 ```
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -431,7 +431,7 @@ The list is sorted by appearance date.
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
@@ -440,7 +440,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```python
 panelist.retrieve_scores_ordered_pair_by_id(panelist_id=14, database_connection=database_connection)
 ```
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -471,7 +471,7 @@ Each list is sorted by appearance date.
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
@@ -480,7 +480,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```python
 panelist.retrieve_scores_list_by_id(panelist_slug="faith-salie", database_connection=database_connection)
 ```
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -512,7 +512,7 @@ The list is sorted by appearance date.
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
@@ -521,7 +521,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```python
 panelist.retrieve_scores_ordered_pair_by_id(panelist_slug="faith-salie", database_connection=database_connection)
 ```
-#### Example response
+#### Example Response
 
 ```json
 {

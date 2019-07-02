@@ -10,7 +10,7 @@ List all show hosts, sorted by host name
 GET /v1.0/hosts
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts
@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/hosts
 host.retrieve_all(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -53,7 +53,7 @@ List all show hosts along with their appearances and scores, sorted by host name
 GET /v1.0/hosts/details
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/details
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/details
 host.retrieve_all_details(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -111,7 +111,7 @@ Get information for a specific show host using the host's database ID
 GET https://api.wwdt.me/v1.0/hosts/{host_id}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
@@ -121,7 +121,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
 host.retrieve_by_id(host_id=2, database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -200,7 +200,7 @@ Get information for a specific show host using the host's slug string
 GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
@@ -210,7 +210,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 host.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {

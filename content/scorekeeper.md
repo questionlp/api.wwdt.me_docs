@@ -10,7 +10,7 @@ List all show scorekeepers, sorted by scorekeeper name
 GET /v1.0/scorekeepers
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/scorekeepers
@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers
 scorekeeper.retrieve_all(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -53,7 +53,7 @@ List all scorekeepers along with their appearances and, if available, descriptio
 GET /v1.0/scorekeepers/details
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/scorekeepers/details
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/details
 scorekeeper.retrieve_all_details(database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -134,7 +134,7 @@ Get information for a specific scorekeepers using the scorekeeper's database ID
 GET https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}
@@ -144,7 +144,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}
 scorekeeper.retrieve_by_id(host_id=11, database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
@@ -225,7 +225,7 @@ Get information for a specific scorekeeper using the scorekeeper's slug string
 GET https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}
 ```
 
-#### Example request
+#### Example Request
 
 ```curl
 $ curl https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}
@@ -235,7 +235,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}
 scorekeeper.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connection=database_connection)
 ```
 
-#### Example response
+#### Example Response
 
 ```json
 {
