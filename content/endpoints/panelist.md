@@ -4,7 +4,10 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List panelists
 
-List all panelists, sorted by panelists name
+Returns an array of panelist objects, each containing their database ID, name,
+slug string and gender.
+
+The array is sorted by panelist name.
 
 ```endpoint
 GET /v1.0/panelists
@@ -47,7 +50,11 @@ panelist.retrieve_all(database_connection=database_connection)
 
 ### List panelists with details
 
-List all panelist along with their statistics, appearances and scores, sorted by panelists name and appearance date
+Returns an array of panelist objects, each containing their database ID, name,
+slug string, gender, statistics and an array of their appearances.
+
+The array is sorted by panelist name and panelist apperances are sorted by
+show date.
 
 ```endpoint
 GET /v1.0/panelists/details
@@ -73,8 +80,8 @@ panelist.retrieve_all_details(database_connection=database_connection)
             {
                 "id": 6,
                 "name": "Aamer Haleem",
-                "gender": "M",
                 "slug": "aamer-haleem",
+                "gender": "M",
                 "statistics": {
                     "scoring": {
                         "minimum": 7,
@@ -138,7 +145,7 @@ panelist.retrieve_all_details(database_connection=database_connection)
 
 ### Retrieve a panelist
 
-Get information for a specific panelist using the panelists's database ID
+Returns a panelist object containing their name, slug string and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}
@@ -163,8 +170,8 @@ panelist.retrieve_by_id(panelist_id=14, database_connection=database_connection)
         "panelist": {
             "id": 14,
             "name": "Luke Burbank",
-            "gender": "M",
-            "slug": "luke-burbank"
+            "slug": "luke-burbank",
+            "gender": "M"
         }
     }
 }
@@ -172,7 +179,8 @@ panelist.retrieve_by_id(panelist_id=14, database_connection=database_connection)
 
 ### Retrieve a panelist with details
 
-Get statistics and appearances for a specific panelist using the panelist's database ID, sorted by appearance date
+Returns a panelist object containing their name, slug string, gender and an
+array of their appearances. Panelist appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/details
@@ -197,8 +205,8 @@ panelist.retrieve_details_by_id(panelist_id=14, database_connection=database_con
         "panelist": {
             "id": 14,
             "name": "Luke Burbank",
-            "gender": "M",
             "slug": "luke-burbank",
+            "gender": "M",
             "statistics": {
                 "scoring": {
                     "minimum": 8,
@@ -260,7 +268,7 @@ panelist.retrieve_details_by_id(panelist_id=14, database_connection=database_con
 
 ### Retrieve a panelist by slug string
 
-Get information for a specific panelist using the panelist's slug string
+Returns a panelist object containing their database ID, name and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}
@@ -285,8 +293,8 @@ panelist.retrieve_by_slug(panelist_slug="faith-salie", database_connection=datab
         "panelist": {
             "id": 30,
             "name": "Faith Salie",
-            "gender": "F",
-            "slug": "faith-salie"
+            "slug": "faith-salie",
+            "gender": "F"
         }
     }
 }
@@ -294,7 +302,8 @@ panelist.retrieve_by_slug(panelist_slug="faith-salie", database_connection=datab
 
 ### Retrieve a panelist with details by slug string
 
-Get information and appearances for a specific panelist using the panelist's slug string, sorted by appearance date
+Returns a panelist object containing their database ID, name, gender and an
+array of their appearances. Panelist appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}/details
@@ -319,8 +328,8 @@ panelist.retrieve_details_by_slug(panelist_slug="faith-salie", database_connecti
         "panelist": {
             "id": 30,
             "name": "Faith Salie",
-            "gender": "F",
             "slug": "faith-salie",
+            "gender": "F",
             "statistics": {
                 "scoring": {
                     "minimum": 9,
@@ -380,11 +389,10 @@ panelist.retrieve_details_by_slug(panelist_slug="faith-salie", database_connecti
 }
 ```
 
-### Retrieve panelist scores as lists
+### Retrieve panelist scores as arrays
 
-Get panelist scores from appearances as two lists, the first list contains panelist's appearance dates and the second list contains panelist's scores, using the panelist's database ID.
-
-Each list is sorted by appearance date.
+Return a scores object containing an array of appearances and an array of
+scores corresponding to each appearance for a panelist.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
@@ -423,9 +431,8 @@ panelist.retrieve_scores_list_by_id(panelist_id=14, database_connection=database
 
 ### Retrieve panelist scores as ordered pairs
 
-Get panelist scores from appearances as a list of ordered pairs in the form of: `(show_date, score)`, using the panelist's database ID.
-
-The list is sorted by appearance date.
+Return a scores object containing an array of ordered pairs corresponding to
+each appearance and score.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
@@ -461,11 +468,10 @@ panelist.retrieve_scores_ordered_pair_by_id(panelist_id=14, database_connection=
 }
 ```
 
-### Retrieve panelist scores as lists by slug string
+### Retrieve panelist scores as arrays by slug string
 
-Get panelist scores from appearances as two lists, the first list contains panelist's appearance dates and the second list contains panelist's scores, using the panelist's slug string.
-
-Each list is sorted by appearance date.
+Return a scores object containing an array of appearances and an array of
+scores corresponding to each appearance for a panelist.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
@@ -504,9 +510,8 @@ panelist.retrieve_scores_list_by_id(panelist_slug="faith-salie", database_connec
 
 ### Retrieve panelist scores as ordered pairs by slug string
 
-Get panelist scores from appearances as a list of ordered pairs in the form of: `(show_date, score)`, using the panelist's slug string.
-
-The list is sorted by appearance date.
+Return a scores object containing an array of ordered pairs corresponding to
+each appearance and score.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair

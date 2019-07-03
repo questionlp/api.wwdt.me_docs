@@ -4,7 +4,8 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List scorekeepers
 
-List all show scorekeepers, sorted by scorekeeper name
+Returns an array of scorekeeper objects, each containing their database ID,
+name, slug string and gender.
 
 ```endpoint
 GET /v1.0/scorekeepers
@@ -47,7 +48,11 @@ scorekeeper.retrieve_all(database_connection=database_connection)
 
 ### List scorekeepers with details
 
-List all scorekeepers along with their appearances and, if available, description, sorted by scorekeeper name and appearance date
+Returns an array of scorekeeper objects, each containing their database ID,
+name, slug string, gender and an array of their appearances.
+
+The array is sorted by scorekeeper name and scorekeeper apperances are sorted
+by show date.
 
 ```endpoint
 GET /v1.0/scorekeepers/details
@@ -128,7 +133,7 @@ scorekeeper.retrieve_all_details(database_connection=database_connection)
 
 ### Retrieve a scorekeeper
 
-Get information for a specific scorekeepers using the scorekeeper's database ID
+Returns a scorekeeper object containing their name, slug string and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}
@@ -162,7 +167,8 @@ scorekeeper.retrieve_by_id(host_id=11, database_connection=database_connection)
 
 ### Retrieve a scorekeeper with details
 
-Get appearances and, if available, description for a specific scorekeeper using the scorekeeper's database ID, sorted by appearance date
+Returns a scorekeeper object containing their name, slug string, gender, and an
+array of their appearances. Scorekeeper appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}/details
@@ -219,7 +225,7 @@ scorekeeper.retrieve_details_by_id(scorekeeper_id=11, database_connection=databa
 
 ### Retrieve a scorekeeper by slug string
 
-Get information for a specific scorekeeper using the scorekeeper's slug string
+Returns a scorekeeper object containing their database ID, name, and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}
@@ -253,7 +259,8 @@ scorekeeper.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connecti
 
 ### Retrieve a scorekeeper with details by slug string
 
-Get information and, if available, description for a specific scorekeeper using the scorekeeper's slug string, sorted by appearance date
+Returns a scorekeeper object containing their database ID, name, gender and an
+array of their appearances. Scorekeeper appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}/details

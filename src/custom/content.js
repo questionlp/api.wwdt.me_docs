@@ -21,5 +21,7 @@ module.exports =
   fs.readFileSync('./content/endpoints/location.md', 'utf8') + '\n' +
   fs.readFileSync('./content/endpoints/panelist.md', 'utf8') + '\n' +
   fs.readFileSync('./content/endpoints/scorekeeper.md', 'utf8') + '\n' +
-  fs.readFileSync('./content/endpoints/show.md', 'utf8');
+  fs.readFileSync('./content/endpoints/show.md', 'utf8') + '\n' +
+  '# Et cetera\n' +
+  fs.readFileSync('./content/footer.md', 'utf8');
   

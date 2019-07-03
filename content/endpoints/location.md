@@ -4,7 +4,10 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List locations
 
-List all show locations, sorted by state, city and venue name
+Returns an array of location objects, each containing the database ID, city,
+state and venue.
+
+The array is ordered by city, state and then venue name.
 
 ```endpoint
 GET /v1.0/locations
@@ -47,7 +50,10 @@ location.retrieve_all(database_connection=database_connection)
 
 ### List locations and recordings
 
-List all show locations along with their recordings, sorted by state, city, venue name and recording date
+Returns an array of location objects, each containing the database ID, city,
+state, venue and an array of recordings.
+
+The array is ordered by city, state and then venue name.
 
 ```endpoint
 GET /v1.0/locations/recordings
@@ -106,7 +112,7 @@ location.retrieve_all_recordings(database_connection=database_connection)
 
 ### Retrieve a location
 
-Get information for a specific show location using the location's database ID
+Returns a location object containing the database ID, city, state and venue.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/locations/{location_id}
@@ -140,7 +146,8 @@ location.retrieve_by_id(location_id=2, database_connection=database_connection)
 
 ### Retrieve a location with list of recordings
 
-Get show recordings for a specific show location using the location's database ID, sorted by recording date
+Returns a location object containing the database ID, city, state, venue and
+an array of recordings.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/locations/{location_id}/recordings

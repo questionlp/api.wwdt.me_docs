@@ -4,7 +4,8 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List Shows
 
-List all shows, sorted by show date
+Returns an array of show objects, each containing the database ID, date and
+whether the show is a best of show and/or a repeat show.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/
@@ -47,7 +48,9 @@ show.retrieve_all(database_connection=database_connection)
 
 ### List Shows with Details
 
-List all shows, host, scorekeeper, panelists, guests, descriptions and notes, sorted by show date
+Returns an array of show objects, each containing the database ID, date,
+whether the show is a best of show and/or a repeat show and more detailed
+show information.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/details
@@ -198,7 +201,8 @@ show.retrieve_all_details(database_connection=database_connection)
 
 ### Retrieve a show
 
-Get information for a specific show using the show's database ID
+Returns a show object containing the database ID, date and whether the show is
+a best of show and/or a repeat show.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{show_id}
@@ -232,7 +236,10 @@ show.retrieve_by_id(show_id=42, database_connection=database_connection)
 
 ### Retrieve a show by year, month and day
 
-Get information for a specific show using the show's four-digit year, one- or two-digit month, and one- or two-digit day
+Returns a show object containing the database ID, date and whether the show is
+a best of show and/or a repeat show.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/date/{year}/{month}/{day}
@@ -266,7 +273,10 @@ show.retrieve_by_date(show_year=2018, show_month=10, show_day=27, database_conne
 
 ### Retrieve a show by ISO date string
 
-Get information for a specific show using the show's ISO date string (`YYYY-MM-DD`)
+Returns a show object containing the database ID, date and whether the show is
+a best of show and/or a repeat show.
+
+The ISO date string must be in `YYYY-MM-DD` format.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/date/iso/{iso_date}
@@ -300,7 +310,8 @@ show.retrieve_by_date_string(show_date='2006-08-19', database_connection=databas
 
 ### Retrieve a show with details
 
-Get details for a show including host, scorekeeper, panelists, guests, descriptions and notes, using the show's database ID
+Returns a show object containing the database ID, date, whether the show is a
+best of show and/or a repeat show and more detailed show information.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{show_id}/details
@@ -396,7 +407,10 @@ show.retrieve_details_by_id(show_id=47, database_connection=database_connection)
 
 ### Retrieve a show with details by year, month and day
 
-Get details for a show including host, scorekeeper, panelists, guests, descriptions and notes, using the show's four-digit year, one- or two-digit month, and one- or two-digit day
+Returns a show object containing the database ID, date, whether the show is a
+best of show and/or a repeat show and more detailed show information.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/date/{year}/{month}/{day}/details
@@ -608,7 +622,10 @@ show.retrieve_details_by_date(show_year=2018, show_month=10, show_day=27, databa
 
 ### Retrieve a show with details by ISO date string
 
-Get details for a show including host, scorekeeper, panelists, guests, descriptions and notes, using the show's ISO date string (`YYYY-MM-DD`)
+Returns a show object containing the database ID, date, whether the show is a
+best of show and/or a repeat show and more detailed show information.
+
+The ISO date string must be in `YYYY-MM-DD` format.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/date/iso/{iso_date}/details
@@ -704,7 +721,10 @@ show.retrieve_details_by_date_string(show_date="2006-08-19", database_connection
 
 ### Retrieve shows by year
 
-Get information for shows for a given year, using a four-digit-year
+Returns an array of show objects, each containing the database ID, date and
+whether the show is a best of show and/or a repeat show.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{year}
@@ -747,7 +767,10 @@ show.retrieve_by_year(show_year=2018, database_connection=database_connection)
 
 ### Retrieve shows by year and month
 
-Get information for shows for a given year and month, using a four-digit year and one- or two-digit month
+Returns an array of show objects, each containing the database ID, date and
+whether the show is a best of show and/or a repeat show.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{year}/{month}
@@ -790,7 +813,11 @@ show.retrieve_by_year(show_year=2018, show_month=10, database_connection=databas
 
 ### Retrieve shows with details by year
 
-Get details for a given year of shows including host, scorekeeper, panelists, guests, descriptions and notes, using a four-digit year
+Returns an array of show objects, each containing their database ID, date,
+whether the show is a best of show and/or a repeat show and more detailed
+show information.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{year}/details
@@ -1050,7 +1077,11 @@ show.retrieve_details_by_year(show_year=2018, database_connection=database_conne
 
 ### Retrieve shows with details by year and month
 
-Get details for a given year and month of shows including host, scorekeeper, panelists, guests, descriptions and notes, using a four-digit year and one- or two-digit month
+Returns an array of show objects, each containing their database ID, date,
+whether the show is a best of show and/or a repeat show and more detailed
+show information.
+
+The year value must be a four-digit year.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/{year}/{month}/details
@@ -1336,7 +1367,8 @@ show.retrieve_details_by_year_month(show_year=, show_month=, database_connection
 
 ### Retrieve recent shows
 
-Get information for a recent set of shows, including shows that aired 32 days ago through upcoming shows 7 days ahead
+Returns an array of show objects, each containing the database ID, date and
+whether the show is a best of show and/or a repeat show.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/recent
@@ -1379,7 +1411,9 @@ show.retrieve_recent(database_connection=database_connection)
 
 ### Retrieve recent shows with details
 
-Get details for a recent set of shows including host, scorekeeper, panelists, guests, descriptions and notes, including shows that aired 32 days ago through upcoming shows 7 days ahead
+Returns an array of show objects, each containing their database ID, date,
+whether the show is a best of show and/or a repeat show and more detailed
+show information.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/shows/recent/details

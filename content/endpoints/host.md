@@ -4,7 +4,8 @@ This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to reque
 
 ### List hosts
 
-List all show hosts, sorted by host name
+Returns an array of host objects, each containing their database ID, name, slug
+string and gender.
 
 ```endpoint
 GET /v1.0/hosts
@@ -47,7 +48,10 @@ host.retrieve_all(database_connection=database_connection)
 
 ### List hosts with details
 
-List all show hosts along with their appearances and scores, sorted by host name and appearance date
+Returns an array of host objects, each containing their database ID, name,
+slug string, gender and an array of their appearances.
+
+The array is sorted by host name and host apperances are sorted by show date.
 
 ```endpoint
 GET /v1.0/hosts/details
@@ -105,7 +109,7 @@ host.retrieve_all_details(database_connection=database_connection)
 
 ### Retrieve a host
 
-Get information for a specific show host using the host's database ID
+Returns a host object containing their name, slug string and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/{host_id}
@@ -139,7 +143,8 @@ host.retrieve_by_id(host_id=2, database_connection=database_connection)
 
 ### Retrieve a host with details
 
-Get information and appearances for a specific show host using the host's database ID, sorted by appearance date
+Returns a host object containing their name, slug string, gender, and an
+array of their appearances. Host appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/{host_id}/details
@@ -194,7 +199,7 @@ host.retrieve_details_by_id(host_id=2, database_connection=database_connection)
 
 ### Retrieve a host by slug string
 
-Get information for a specific show host using the host's slug string
+Returns a host object containing their database ID, name and gender.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
@@ -228,7 +233,8 @@ host.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connec
 
 ### Retrieve a host with details by slug string
 
-Get information and appearances for a specific show host using the host's slug string, sorted by appearance date
+Returns a host object containing their database ID, name, gender and an array
+of their appearances. Host appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details

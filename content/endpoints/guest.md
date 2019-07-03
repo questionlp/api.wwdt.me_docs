@@ -1,10 +1,14 @@
 ## Guest
 
-This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to request Not My Job guests and their corresponding information.
+This set of Wait Wait... Don't Tell Me! Stats API endpoints can be used to
+request Not My Job guests and their corresponding information.
 
 ### List guests
 
-List all Not My Job guests, sorted by guest name
+Returns an array of guest objects, each containing their database ID, name and
+slug string.
+
+The array is sorted by guest name.
 
 ```endpoint
 GET /v1.0/guests
@@ -45,7 +49,10 @@ guest.retrieve_all(database_connection=database_connection)
 
 ### List guests with details
 
-List all Not My Job guests along with their appearances and scores, sorted by guest name and appearance date
+Returns an array of guest objects, each containing their database ID, name,
+slug string and an array of their appearances.
+
+The array is sorted by guest name and guest apperances are sorted by show date.
 
 ```endpoint
 GET /v1.0/guests/details
@@ -116,7 +123,7 @@ guest.retrieve_all_details(database_connection=database_connection)
 
 ### Retrieve a guest
 
-Get information for a specific Not My Job guest using the guest's database ID
+Returns a guest object containing their name and slug string.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/{guest_id}
@@ -149,7 +156,8 @@ guest.retrieve_by_id(guest_id=2, database_connection=database_connection)
 
 ### Retrieve a guest with details
 
-Get information and appearances for a specific Not My Job guest using the guest's database ID, sorted by appearance date
+Returns a guest object containing their name, slug string and an array of their
+appearances. Guest appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/{guest_id}/details
@@ -205,7 +213,7 @@ guest.retrieve_details_by_id(guest_id=2, database_connection=database_connection
 
 ### Retrieve a guest by slug string
 
-Get information for a specific Not My Job guest using the guest's slug string
+Returns a guest object containing their database ID and name.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
@@ -238,7 +246,8 @@ guest.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_con
 
 ### Retrieve a guest with details by slug string
 
-Get information and appearances for a specific Not My Job guest using the guest's slug string, sorted by appearance date
+Returns a guest object containing their database ID, name and an array of their
+appearances. Guest appearances are sorted by show date.
 
 ```endpoint
 GET https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
