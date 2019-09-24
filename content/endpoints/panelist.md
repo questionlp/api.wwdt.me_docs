@@ -20,7 +20,7 @@ $ curl https://api.wwdt.me/v1.0/panelists
 ```
 
 ```python
-panelist.retrieve_all(database_connection=database_connection)
+panelist.info.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -67,7 +67,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/details
 ```
 
 ```python
-panelist.retrieve_all_details(database_connection=database_connection)
+panelist.details.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -158,7 +158,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}
 ```
 
 ```python
-panelist.retrieve_by_id(panelist_id=14, database_connection=database_connection)
+panelist.info.retrieve_by_id(panelist_id=14, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -193,7 +193,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/details
 ```
 
 ```python
-panelist.retrieve_details_by_id(panelist_id=14, database_connection=database_connection)
+panelist.details.retrieve_by_id(panelist_id=14, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -281,7 +281,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}
 ```
 
 ```python
-panelist.retrieve_by_slug(panelist_slug="faith-salie", database_connection=database_connection)
+panelist.info.retrieve_by_slug(panelist_slug="faith-salie", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -316,7 +316,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/slug/{panelist_slug}/details
 ```
 
 ```python
-panelist.retrieve_details_by_slug(panelist_slug="faith-salie", database_connection=database_connection)
+panelist.details.retrieve_by_slug(panelist_slug="faith-salie", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -405,7 +405,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```
 
 ```python
-panelist.retrieve_scores_list_by_id(panelist_id=14, database_connection=database_connection)
+panelist.info.retrieve_scores_list_by_id(panelist_id=14, database_connection=database_connection)
 ```
 #### Example Response
 
@@ -445,7 +445,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```
 
 ```python
-panelist.retrieve_scores_ordered_pair_by_id(panelist_id=14, database_connection=database_connection)
+panelist.info.retrieve_scores_ordered_pair_by_id(panelist_id=14, database_connection=database_connection)
 ```
 #### Example Response
 
@@ -484,7 +484,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores
 ```
 
 ```python
-panelist.retrieve_scores_list_by_id(panelist_slug="faith-salie", database_connection=database_connection)
+panelist.info.retrieve_scores_list_by_id(panelist_slug="faith-salie", database_connection=database_connection)
 ```
 #### Example Response
 
@@ -524,7 +524,7 @@ $ curl https://api.wwdt.me/v1.0/panelists/{panelist_id}/scores/ordered-pair
 ```
 
 ```python
-panelist.retrieve_scores_ordered_pair_by_id(panelist_slug="faith-salie", database_connection=database_connection)
+panelist.info.retrieve_scores_ordered_pair_by_id(panelist_slug="faith-salie", database_connection=database_connection)
 ```
 #### Example Response
 

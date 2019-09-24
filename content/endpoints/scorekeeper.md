@@ -18,7 +18,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers
 ```
 
 ```python
-scorekeeper.retrieve_all(database_connection=database_connection)
+scorekeeper.info.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -65,7 +65,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/details
 ```
 
 ```python
-scorekeeper.retrieve_all_details(database_connection=database_connection)
+scorekeeper.details.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -146,7 +146,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}
 ```
 
 ```python
-scorekeeper.retrieve_by_id(host_id=11, database_connection=database_connection)
+scorekeeper.info.retrieve_by_id(host_id=11, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -181,7 +181,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/{scorekeeper_id}/details
 ```
 
 ```python
-scorekeeper.retrieve_details_by_id(scorekeeper_id=11, database_connection=database_connection)
+scorekeeper.details.retrieve_by_id(scorekeeper_id=11, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -238,7 +238,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}
 ```
 
 ```python
-scorekeeper.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connection=database_connection)
+scorekeeper.info.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -273,7 +273,7 @@ $ curl https://api.wwdt.me/v1.0/scorekeepers/slug/{scorekeeper_slug}/details
 ```
 
 ```python
-scorekeeper.retrieve_details_by_slug(scorekeeper_slug="korva-coleman", database_connection=database_connection)
+scorekeeper.details.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_connection=database_connection)
 ```
 
 #### Example Response

@@ -18,7 +18,7 @@ $ curl https://api.wwdt.me/v1.0/shows/
 ```
 
 ```python
-show.retrieve_all(database_connection=database_connection)
+show.info.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -63,7 +63,7 @@ $ curl https://api.wwdt.me/v1.0/shows/details
 ```
 
 ```python
-show.retrieve_all_details(database_connection=database_connection)
+show.details.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -215,7 +215,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{show_id}
 ```
 
 ```python
-show.retrieve_by_id(show_id=42, database_connection=database_connection)
+show.info.retrieve_by_id(show_id=42, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -252,7 +252,7 @@ $ curl https://api.wwdt.me/v1.0/shows/date/{year}/{month}/{day}
 ```
 
 ```python
-show.retrieve_by_date(show_year=2018, show_month=10, show_day=27, database_connection=database_connection)
+show.info.retrieve_by_date(show_year=2018, show_month=10, show_day=27, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -289,7 +289,7 @@ $ curl https://api.wwdt.me/v1.0/shows/date/iso/{iso_date}
 ```
 
 ```python
-show.retrieve_by_date_string(show_date='2006-08-19', database_connection=database_connection)
+show.info.retrieve_by_date_string(show_date='2006-08-19', database_connection=database_connection)
 ```
 
 #### Example Response
@@ -324,7 +324,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{show_id}/details
 ```
 
 ```python
-show.retrieve_details_by_id(show_id=47, database_connection=database_connection)
+show.details.retrieve_by_id(show_id=47, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -423,7 +423,7 @@ $ curl https://api.wwdt.me/v1.0/shows/date/{year}/{month}/{day}/details
 ```
 
 ```python
-show.retrieve_details_by_date(show_year=2018, show_month=10, show_day=27, database_connection=database_connection)
+show.details.retrieve_by_date(show_year=2018, show_month=10, show_day=27, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -638,7 +638,7 @@ $ curl https://api.wwdt.me/v1.0/shows/date/iso/{iso_date}/details
 ```
 
 ```python
-show.retrieve_details_by_date_string(show_date="2006-08-19", database_connection=database_connection)
+show.details.retrieve_by_date_string(show_date="2006-08-19", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -737,7 +737,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{year}
 ```
 
 ```python
-show.retrieve_by_year(show_year=2018, database_connection=database_connection)
+show.info.retrieve_by_year(show_year=2018, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -783,7 +783,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{show_year}/{show_month}
 ```
 
 ```python
-show.retrieve_by_year(show_year=2018, show_month=10, database_connection=database_connection)
+show.info.retrieve_by_year(show_year=2018, show_month=10, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -830,7 +830,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{year}/details
 ```
 
 ```python
-show.retrieve_details_by_year(show_year=2018, database_connection=database_connection)
+show.details.retrieve_by_year(show_year=2018, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -1094,7 +1094,7 @@ $ curl https://api.wwdt.me/v1.0/shows/{year}/{month}/details
 ```
 
 ```python
-show.retrieve_details_by_year_month(show_year=, show_month=, database_connection=database_connection)
+show.details.retrieve_by_year_month(show_year=, show_month=, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -1381,7 +1381,7 @@ $ curl https://api.wwdt.me/v1.0/shows/recent
 ```
 
 ```python
-show.retrieve_recent(database_connection=database_connection)
+show.info.retrieve_recent(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -1426,7 +1426,7 @@ $ curl https://api.wwdt.me/v1.0/shows/recent/details
 ```
 
 ```python
-show.retrieve_recent_details(database_connection=database_connection)
+show.details.retrieve_recent(database_connection=database_connection)
 ```
 
 #### Example Response

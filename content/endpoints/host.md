@@ -18,7 +18,7 @@ $ curl https://api.wwdt.me/v1.0/hosts
 ```
 
 ```python
-host.retrieve_all(database_connection=database_connection)
+host.info.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -64,7 +64,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/details
 ```
 
 ```python
-host.retrieve_all_details(database_connection=database_connection)
+host.details.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -122,7 +122,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}
 ```
 
 ```python
-host.retrieve_by_id(host_id=2, database_connection=database_connection)
+host.info.retrieve_by_id(host_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -157,7 +157,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/{host_id}/details
 ```
 
 ```python
-host.retrieve_details_by_id(host_id=2, database_connection=database_connection)
+host.details.retrieve_by_id(host_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -212,7 +212,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}
 ```
 
 ```python
-host.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connection)
+host.info.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -247,7 +247,7 @@ $ curl https://api.wwdt.me/v1.0/hosts/slug/{host_slug}/details
 ```
 
 ```python
-host.retrieve_details_by_slug(host_slug="tom-hanks", database_connection=database_connection)
+host.details.retrieve_by_slug(host_slug="tom-hanks", database_connection=database_connection)
 ```
 
 #### Example Response

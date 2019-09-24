@@ -21,7 +21,7 @@ $ curl https://api.wwdt.me/v1.0/guests
 ```
 
 ```python
-guest.retrieve_all(database_connection=database_connection)
+guest.info.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -65,7 +65,7 @@ $ curl https://api.wwdt.me/v1.0/guests/details
 ```
 
 ```python
-guest.retrieve_all_details(database_connection=database_connection)
+guest.details.retrieve_all(database_connection=database_connection)
 ```
 
 #### Example Response
@@ -136,7 +136,7 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}
 ```
 
 ```python
-guest.retrieve_by_id(guest_id=2, database_connection=database_connection)
+guest.info.retrieve_by_id(guest_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -170,7 +170,7 @@ $ curl https://api.wwdt.me/v1.0/guests/{guest_id}/details
 ```
 
 ```python
-guest.retrieve_details_by_id(guest_id=2, database_connection=database_connection)
+guest.details.retrieve_by_id(guest_id=2, database_connection=database_connection)
 ```
 
 #### Example Response
@@ -226,7 +226,7 @@ $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}
 ```
 
 ```python
-guest.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_connection)
+guest.info.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_connection)
 ```
 
 #### Example Response
@@ -260,7 +260,7 @@ $ curl https://api.wwdt.me/v1.0/guests/slug/{guest_slug}/details
 ```
 
 ```python
-guest.retrieve_details_by_slug(guest_slug="drew-carey", database_connection=database_connection)
+guest.details.retrieve_by_slug(guest_slug="drew-carey", database_connection=database_connection)
 ```
 
 #### Example Response
