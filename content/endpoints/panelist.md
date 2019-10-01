@@ -108,10 +108,6 @@ panelist.details.retrieve_all(database_connection=database_connection)
                         }
                     }
                 },
-                "bluffs": {
-                    "chosen": 0,
-                    "correct": 1
-                },
                 "appearances": {
                     "count": {
                         "regular_shows": 7,
@@ -237,10 +233,6 @@ panelist.details.retrieve_by_id(panelist_id=14, database_connection=database_con
                     }
                 }
             },
-            "bluffs": {
-                "chosen": 16,
-                "correct": 29
-            },
             "appearances": {
                 "count": {
                     "regular_shows": 73,
@@ -363,10 +355,6 @@ panelist.details.retrieve_by_slug(panelist_slug="faith-salie", database_connecti
                         "third": 11.6279
                     }
                 }
-            },
-            "bluffs": {
-                "chosen": 27,
-                "correct": 35
             },
             "appearances": {
                 "count": {
