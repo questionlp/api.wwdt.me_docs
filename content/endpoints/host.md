@@ -86,12 +86,14 @@ host.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 427,
                             "date": "2000-08-19",
                             "best_of": false,
                             "repeat_show": false,
                             "guest": true
                         },
                         {
+                            "show_id": 480,
                             "date": "2001-08-25",
                             "best_of": false,
                             "repeat_show": false,
@@ -176,14 +178,15 @@ host.details.retrieve_by_id(host_id=2, database_connection=database_connection)
                     "regular_shows": 5,
                     "all_shows": 5
                 },
-                "shows": [
                     {
+                        "show_id": 48,
                         "date": "2006-08-12",
                         "best_of": false,
                         "repeat_show": false,
                         "guest": true
                     },
                     {
+                        "show_id": 47,
                         "date": "2006-08-19",
                         "best_of": false,
                         "repeat_show": false,
@@ -268,12 +271,14 @@ host.details.retrieve_by_slug(host_slug="tom-hanks", database_connection=databas
                 },
                 "shows": [
                     {
+                        "show_id": 990,
                         "date": "2017-01-14",
                         "best_of": false,
                         "repeat_show": false,
                         "guest": true
                     },
                     {
+                        "show_id": 1022,
                         "date": "2017-08-26",
                         "best_of": false,
                         "repeat_show": true,
