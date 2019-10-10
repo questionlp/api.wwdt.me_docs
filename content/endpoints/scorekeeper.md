@@ -87,6 +87,7 @@ scorekeeper.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 760,
                             "date": "2012-08-18",
                             "best_of": false,
                             "repeat_show": false,
@@ -94,6 +95,7 @@ scorekeeper.details.retrieve_all(database_connection=database_connection)
                             "description": "Legendary Anchorman"
                         },
                         {
+                            "show_id": 763,
                             "date": "2012-09-08",
                             "best_of": false,
                             "repeat_show": false,
@@ -116,6 +118,7 @@ scorekeeper.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 328,
                             "date": "1998-08-22",
                             "best_of": false,
                             "repeat_show": false,
@@ -202,6 +205,7 @@ scorekeeper.details.retrieve_by_id(scorekeeper_id=11, database_connection=databa
                 },
                 "shows": [
                     {
+                        "show_id": 760,
                         "date": "2012-08-18",
                         "best_of": false,
                         "repeat_show": false,
@@ -209,6 +213,7 @@ scorekeeper.details.retrieve_by_id(scorekeeper_id=11, database_connection=databa
                         "description": "Legendary Anchorman"
                     },
                     {
+                        "show_id": 763,
                         "date": "2012-09-08",
                         "best_of": false,
                         "repeat_show": false,
@@ -294,6 +299,7 @@ scorekeeper.details.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_
                 },
                 "shows": [
                     {
+                        "show_id": 75,
                         "date": "2006-02-04",
                         "best_of": false,
                         "repeat_show": false,
@@ -301,6 +307,7 @@ scorekeeper.details.retrieve_by_slug(scorekeeper_slug="korva-coleman", database_
                         "description": null
                     },
                     {
+                        "show_id": 74,
                         "date": "2006-02-11",
                         "best_of": false,
                         "repeat_show": false,

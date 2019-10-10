@@ -120,6 +120,7 @@ panelist.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 122,
                             "date": "2005-03-19",
                             "best_of": false,
                             "repeat_show": false,
@@ -129,6 +130,7 @@ panelist.details.retrieve_all(database_connection=database_connection)
                             "rank": "3"
                         },
                         {
+                            "show_id": 119,
                             "date": "2005-04-09",
                             "best_of": false,
                             "repeat_show": false,
@@ -249,6 +251,7 @@ panelist.details.retrieve_by_id(panelist_id=14, database_connection=database_con
                 },
                 "shows": [
                     {
+                        "show_id": 54,
                         "date": "2006-07-01",
                         "best_of": false,
                         "repeat_show": false,
@@ -258,6 +261,7 @@ panelist.details.retrieve_by_id(panelist_id=14, database_connection=database_con
                         "rank": "1"
                     },
                     {
+                        "show_id": 50,
                         "date": "2006-07-29",
                         "best_of": false,
                         "repeat_show": false,
@@ -376,6 +380,7 @@ panelist.details.retrieve_by_slug(panelist_slug="faith-salie", database_connecti
                 },
                 "shows": [
                     {
+                        "show_id": 611,
                         "date": "2009-10-17",
                         "best_of": false,
                         "repeat_show": false,
@@ -385,6 +390,7 @@ panelist.details.retrieve_by_slug(panelist_slug="faith-salie", database_connecti
                         "rank": "3"
                     },
                     {
+                        "show_id": 616,
                         "date": "2009-11-21",
                         "best_of": false,
                         "repeat_show": false,

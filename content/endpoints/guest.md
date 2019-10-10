@@ -86,6 +86,7 @@ guest.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 537,
                             "date": "2008-10-04",
                             "best_of": false,
                             "repeat_show": false,
@@ -106,6 +107,7 @@ guest.details.retrieve_all(database_connection=database_connection)
                     },
                     "shows": [
                         {
+                            "show_id": 25,
                             "date": "2007-01-20",
                             "best_of": false,
                             "repeat_show": false,
@@ -190,6 +192,7 @@ guest.details.retrieve_by_id(guest_id=2, database_connection=database_connection
                 },
                 "shows": [
                     {
+                        "show_id": 16,
                         "date": "2007-03-24",
                         "best_of": false,
                         "repeat_show": false,
@@ -197,6 +200,7 @@ guest.details.retrieve_by_id(guest_id=2, database_connection=database_connection
                         "score_exception": false
                     },
                     {
+                        "show_id": 1,
                         "date": "2007-07-07",
                         "best_of": true,
                         "repeat_show": false,
@@ -280,6 +284,7 @@ guest.details.retrieve_by_slug(guest_slug="drew-carey", database_connection=data
                 },
                 "shows": [
                     {
+                        "show_id": 505,
                         "date": "2008-02-23",
                         "best_of": false,
                         "repeat_show": false,
@@ -287,6 +292,7 @@ guest.details.retrieve_by_slug(guest_slug="drew-carey", database_connection=data
                         "score_exception": false
                     },
                     {
+                        "show_id": 576,
                         "date": "2009-02-14",
                         "best_of": true,
                         "repeat_show": false,
