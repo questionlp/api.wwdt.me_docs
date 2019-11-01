@@ -113,6 +113,16 @@ panelist.details.retrieve_all(database_connection=database_connection)
                     "correct": 1
                 },
                 "appearances": {
+                    "milestones": {
+                        "first": {
+                            "show_id": 35,
+                            "show_date": "2005-03-19"
+                        },
+                        "most_recent": {
+                            "show_id": 122,
+                            "show_date": "2006-11-11"
+                        }
+                    },
                     "count": {
                         "regular_shows": 7,
                         "all_shows": 9,
@@ -244,6 +254,16 @@ panelist.details.retrieve_by_id(panelist_id=14, database_connection=database_con
                 "correct": 29
             },
             "appearances": {
+                "milestones": {
+                    "first": {
+                        "show_id": 3,
+                        "show_date": "2006-07-01"
+                    },
+                    "most_recent": {
+                        "show_id": 1119,
+                        "show_date": "2019-06-29"
+                    }
+                },
                 "count": {
                     "regular_shows": 73,
                     "all_shows": 129,
@@ -373,6 +393,16 @@ panelist.details.retrieve_by_slug(panelist_slug="faith-salie", database_connecti
                 "correct": 35
             },
             "appearances": {
+                "milestones": {
+                    "first": {
+                        "show_id": 611,
+                        "show_date": "2009-10-17"
+                    },
+                    "most_recent": {
+                        "show_id": 1133,
+                        "show_date": "2019-10-05"
+                    }
+                },
                 "count": {
                     "regular_shows": 87,
                     "all_shows": 139,
