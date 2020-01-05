@@ -6,5 +6,5 @@ Github at under [questionlp/api.wwdt.me_docs](https://github.com/questionlp/api.
 
 ## Copyright
 
-Copyright &copy; 2019 Linh Pham and project contributors. The code for this
+Copyright &copy; 2019&ndash;2020 Linh Pham and project contributors. The code for this
 site is published under the ISC License.
