@@ -32,12 +32,14 @@ location.info.retrieve_all(database_connection=database_connection)
         "locations": [
             {
                 "id": 139,
+                "slug": "davis-concert-hall-fairbanks-ak",
                 "city": "Fairbanks",
                 "state": "AK",
                 "venue": "Davis Concert Hall"
             },
             {
                 "id": 127,
+                "slug": "samford-university-wright-center-birmingham-al",
                 "city": "Birmingham",
                 "state": "AL",
                 "venue": "Samford University Wright Center"
@@ -78,31 +80,45 @@ location.details.retrieve_all_recordings(database_connection=database_connection
         "locations": [
             {
                 "id": 139,
+                "slug": "davis-concert-hall-fairbanks-ak",
                 "city": "Fairbanks",
                 "state": "AK",
                 "venue": "Davis Concert Hall",
-                "recordings": [
-                    {
-                        "show_id": 706,
-                        "date": "2011-08-13",
-                        "best_of": false,
-                        "repeat_show": false
-                    }
-                ]
+                "recordings": {
+                    "count": {
+                        "regular_shows": 1,
+                        "all_shows": 1
+                    },
+                    "shows": [
+                        {
+                            "show_id": 706,
+                            "date": "2011-08-13",
+                            "best_of": false,
+                            "repeat_show": false
+                        }
+                    ]
+                }
             },
             {
                 "id": 127,
+                "slug": "samford-university-wright-center-birmingham-al",
                 "city": "Birmingham",
                 "state": "AL",
                 "venue": "Samford University Wright Center",
-                "recordings": [
-                    {
-                        "show_id": 506,
-                        "date": "2008-03-01",
-                        "best_of": false,
-                        "repeat_show": false
-                    }
-                ]
+                "recordings": {
+                    "count": {
+                        "regular_shows": 1,
+                        "all_shows": 1
+                    },
+                    "shows": [
+                        {
+                            "show_id": 506,
+                            "date": "2008-03-01",
+                            "best_of": false,
+                            "repeat_show": false
+                        }
+                    ]
+                }
             },
             ...
         ]
@@ -136,6 +152,7 @@ location.info.retrieve_by_id(location_id=2, database_connection=database_connect
     "data": {
         "location": {
             "id": 2,
+            "slug": "chase-auditorium-chicago-il",
             "city": "Chicago",
             "state": "IL",
             "venue": "Chase Auditorium"
@@ -171,24 +188,31 @@ location.details.retrieve_recordings_by_id(location_id=2, database_connection=da
     "data": {
         "location": {
             "id": 2,
+            "slug": "chase-auditorium-chicago-il",
             "city": "Chicago",
             "state": "IL",
             "venue": "Chase Auditorium",
-            "recordings": [
-                {
-                    "show_id": 165,
-                    "date": "2004-02-28",
-                    "best_of": false,
-                    "repeat_show": false
+            "recordings": {
+                "count": {
+                    "regular_shows": 481,
+                    "all_shows": 573
                 },
-                {
-                    "show_id": 170,
-                    "date": "2004-04-03",
-                    "best_of": false,
-                    "repeat_show": false
-                },
-                ...
-            ]
+                "shows": [
+                    {
+                        "show_id": 157,
+                        "date": "2004-01-03",
+                        "best_of": false,
+                        "repeat_show": false
+                    },
+                    {
+                        "show_id": 165,
+                        "date": "2004-02-28",
+                        "best_of": false,
+                        "repeat_show": false
+                    },
+                    ...
+                ]
+            }
         }
     }
 }
